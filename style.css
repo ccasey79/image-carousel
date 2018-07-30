@@ -1,0 +1,138 @@
+body {
+  margin: 4% 10%;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 110px;
+  overflow: hidden;
+  padding-bottom: 70px;
+}
+
+ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 9999%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+
+li {
+  position: relative;
+  height: 100%;
+  width: calc(79vw);
+  float: left;
+}
+
+div {
+  height: 100%;
+  background: #fff;
+  float: left;
+  margin: 0 6%;
+}
+
+div img {
+  box-shadow: 5px 10px 8px 10px #888888;
+  border: 2px solid #b3b3b3;
+  padding: 5px;
+  max-width: 100%;
+}
+
+hr {
+  border: none;
+  height: 20px;
+ 	width: 90%;
+	height: 50px;
+	margin-top: 0;
+	border-bottom: 1px solid #1f1209;
+	box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px;
+}
+
+/* Arrow Navigation */
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#previous {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #000000 transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#previous:hover {
+  border-color: transparent #b3b3b3 transparent transparent;
+}
+
+#next {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #000000;
+  right: 0;
+  margin-right: 30px;
+}
+
+#next:hover {
+  border-color: transparent transparent transparent #b3b3b3;
+}
+
+
+/* Bounce Out Hover */
+
+.hvr-bounce-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+
+/* MEDIA QUERIES */
+
+/* IPAD TABLET */
+@media only screen and (max-width: 768px) {
+    li { width: calc(73vw); }
+    ul { left: 134px; }
+    .arrow { top: 54%; }
+    #wrapper { padding-bottom: 57px; }
+}
+
+/* MOBILES */
+@media only screen and (max-width: 414px) {
+    #wrapper { margin-top: 40px; padding-bottom: 0px;}
+    .arrow { top: 75%; }
+    ul { left: 16px; }
+}
+
+@media only screen and (max-width: 375px) {
+    ul { left: 7px; }
+    .arrow { top: 83%; }
+}
+
+@media only screen and (max-width: 360px) {
+    ul { left: 4px; }
+    .arrow { top: 88%; }
+    #next { margin-right: 14px; }
+}
